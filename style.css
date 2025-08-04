@@ -1,0 +1,150 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(65deg,rgba(228, 144, 48, 0.638),rgba(220, 196, 127, 0.500))
+}
+
+header {
+  display: flex;
+  height: auto;
+  text-align: center;
+  padding: 0.5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+    font-style: italic;
+}
+.title {
+  flex-direction: column;
+}
+.pp {
+    border: 3px solid transparent;
+    height: 20vh;
+    width: 20vh;
+    border-radius: 50%;
+    margin-top: 5vh;
+    background:
+      linear-gradient(45deg,rgba(0, 94, 194, 0.982),rgba(157, 0, 128,0.982)) border-box;
+    transition: background 0.3s ease-in,transform 0.3s;
+}
+
+
+.pp:hover {
+  background:
+  linear-gradient(45deg,rgba(22, 233, 212, 0.982),rgba(249, 28, 109, 0.982)) border-box;
+  transform: scale(1.2);
+}
+
+main {
+  height: 64vh;
+  padding: 2vh;
+  text-align: center;
+  justify-content: center;
+}
+.networks {
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin: 4vh;
+  align-items: center;
+}
+
+.fan {
+  color: aliceblue;
+  text-decoration: none;
+}
+.fan:hover {
+  color: aliceblue;
+  text-decoration: none;
+}
+.fan:visited {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.website {
+  border: 3px solid transparent;
+  font-size: 1.5rem;
+  border-radius: 25px ;
+  background:
+    linear-gradient(to left,rgb(0, 229, 255),rgb(205, 7, 195)) padding-box,
+    linear-gradient(45deg,rgba(113, 125, 138, 0.436),rgba(113, 125, 138, 0.436)) border-box;
+  padding: 2vh;
+  margin-top: 15vh;
+  margin-right: 25vw;
+  margin-left: 25vw;
+  transition: transform 0.3s;
+}
+
+.website:hover {
+  transform: scale(1.1);
+  background:
+    linear-gradient(to left,rgb(224, 25, 204),rgb(12, 162, 192)) padding-box,
+    linear-gradient(45deg,rgba(0, 94, 194, 0.982),rgb(157, 0, 128)) border-box;
+}
+
+
+.link {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.midlink {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-right: 5vh;
+  padding-left: 5vh;
+}
+
+
+.logo {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   width: auto;
+   height: 8vh;
+   transition: transform 0.2s;
+}
+
+.logo:hover {
+    transform: scale(1.1);
+}
+
+.block-nets {
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  bottom: 5vh;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  height: 5vh;
+  width: 100vw;
+  background-color: black;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  padding: 1vh;
+}
