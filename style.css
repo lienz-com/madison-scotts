@@ -43,25 +43,82 @@ main {
     width: 20dvh;
     border-radius: 50%;
     background:
-      linear-gradient(45deg,rgba(0, 94, 194, 0.982),rgba(157, 0, 128,0.982)) border-box;
-    transition: background 2s ease-in,transform 0.3s;
+      linear-gradient(45deg,#ec2711, #f7ed2e, rgb(0, 229, 255),rgb(205, 7, 195)) border-box;
+    transition: background 1s ease-in,transform 0.3s;
     position: absolute;
     margin-top: 5dvh;
+    cursor: pointer;
+    display: block;
+    background-size: 400% 400%;
+    animation: gradientBG 5s ease infinite;
 }
 
 .pp:hover {
   background:
-  linear-gradient(45deg,rgba(22, 233, 212, 0.982),rgba(249, 28, 109, 0.982)) border-box;
+  linear-gradient(45deg,#e40b3681, #e0b23397,rgba(22, 233, 212, 0.982),rgba(238, 21, 101, 0.982)) border-box;
   transform: scale(1.2);
+  animation: gradientBG 5s ease infinite;
+}
+
+@keyframes gradientBG {
+  0% { background-position: 0% 50%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 50% 100%; } 
+  75% { background-position: 100% 50%; } 
+  100% { background-position: 0% 50%; }
+}
+
+.video-trigger {
+  width: 200px;
+  cursor: pointer;
+  display: block;
+  margin: 20px auto;
+}
+
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: relative;
+  width: 90%;
+  max-width: 600px;
+  background: #000;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.close {
+  position: absolute;
+  top: 10px; right: 15px;
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+  z-index: 10;
+}
+
+video {
+  width: 70vw;
+  height: auto;
+  display: block;
 }
 
 .website {
   border: 0.5rem solid transparent;
   font-size: 3.5rem;
   border-radius: 2.5rem ;
-  background:
-    linear-gradient(to left,rgb(0, 229, 255),rgb(205, 7, 195)) padding-box,
-    linear-gradient(45deg,rgba(113, 125, 138, 0.436),rgba(113, 125, 138, 0.436)) border-box;
+  background: 
+  linear-gradient(to left,rgb(0, 229, 255),rgb(205, 7, 195)) padding-box,
+  linear-gradient(45deg,rgba(0, 229, 255,0.1),rgba(205, 7, 195,0.1) ) border-box;
   transition: background 2s ease-in,transform 0.3s;
   width: 60dvw;
   padding-top: 1rem;
@@ -69,13 +126,44 @@ main {
   position: absolute;
   top: 50dvh;
   color: aliceblue;
+  z-index: 1;
+
 }
 
 .website:hover {
   transform: scale(1.1);
-  background:
-    linear-gradient(to left,rgb(224, 25, 204),rgb(12, 162, 192)) padding-box,
-    linear-gradient(45deg,rgba(0, 94, 194, 0.982),rgb(157, 0, 128)) border-box;
+  background:linear-gradient(to left,rgb(224, 25, 204),rgb(12, 162, 192)) padding-box,
+  linear-gradient(45deg,rgba(0, 229, 255,0.1),rgba(205, 7, 195,0.1) ) border-box;
+
+}
+
+/* Bordure animée */
+.website::before {
+  content: "";
+  position: absolute;
+  top: -0.4rem;
+  bottom: -0.4rem; 
+  right: -0.4rem;
+  left: -0.4rem;           /* colle aux bords */
+  padding: 0.6rem;              /* épaisseur de la bordure */
+  border-radius: 2.6rem;        /* mêmes arrondis */
+  background: linear-gradient(270deg, #00c6ff, #0072ff, #ff007a, #ff7e5f);
+  background-size: 600% 600%;
+  animation: moveGradient 5s ease infinite;
+  -webkit-mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+          mask-composite: exclude;
+  z-index: -1;
+}
+
+@keyframes moveGradient {
+  0% { background-position: 0% 0%; }
+  25% { background-position: 50% 50%; }
+  50% { background-position: 100% 100%; } 
+  75% { background-position: 100% 50%; } 
+  100% { background-position: 0% 50%; }
 }
 
 .fan {
