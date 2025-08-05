@@ -57,7 +57,6 @@ main {
   background:
   linear-gradient(45deg,#e40b3681, #e0b23397,rgba(22, 233, 212, 0.982),rgba(238, 21, 101, 0.982)) border-box;
   transform: scale(1.2);
-  animation: gradientBG 5s ease infinite;
 }
 
 @keyframes gradientBG {
