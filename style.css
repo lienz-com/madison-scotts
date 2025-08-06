@@ -57,6 +57,7 @@ main {
   background:
   linear-gradient(45deg,#e40b3681, #e0b23397,rgba(22, 233, 212, 0.982),rgba(238, 21, 101, 0.982)) border-box;
   transform: scale(1.2);
+  animation: gradientBG 5s ease infinite;
 }
 
 @keyframes gradientBG {
@@ -114,7 +115,7 @@ video {
 .website {
   border: 0.5rem solid transparent;
   font-size: 3.5rem;
-  border-radius: 2.5rem ;
+  border-radius: 3rem ;
   background: 
   linear-gradient(to left,rgb(0, 229, 255),rgb(205, 7, 195)) padding-box,
   linear-gradient(45deg,rgba(0, 229, 255,0.1),rgba(205, 7, 195,0.1) ) border-box;
@@ -136,16 +137,15 @@ video {
 
 }
 
-/* Bordure animée */
 .website::before {
   content: "";
   position: absolute;
   top: -0.4rem;
   bottom: -0.4rem; 
   right: -0.4rem;
-  left: -0.4rem;           /* colle aux bords */
-  padding: 0.6rem;              /* épaisseur de la bordure */
-  border-radius: 2.6rem;        /* mêmes arrondis */
+  left: -0.4rem; 
+  padding: 0.6rem;     
+  border-radius: 3.1rem;        
   background: linear-gradient(270deg, #00c6ff, #0072ff, #ff007a, #ff7e5f);
   background-size: 600% 600%;
   animation: moveGradient 5s ease infinite;
@@ -178,6 +178,17 @@ video {
   text-decoration: none;
 }
 
+.img-fan {  
+  width: 50dvw;
+  height: auto;
+}
+
+.acc2 {
+    color: rgb(0, 0, 0);
+    font-size: 3rem;
+    position: absolute;
+    top: 46dvh;
+}
 .block-nets {
   display: flex;
   flex-direction: column;
